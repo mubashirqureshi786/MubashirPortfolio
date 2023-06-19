@@ -1,0 +1,59 @@
+.wrapper {
+  display: flex;
+}
+
+.wrapper .first-text {
+  font-size: 60px;
+  color: #fff;
+}
+
+.wrapper .sec-texts {
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.sec-texts li {
+  position: relative;
+  top: 0;
+  font-size: 60px;
+  color: #f3c745;
+  list-style: none;
+  padding: 0 20px;
+  text-shadow: 0 0 10px #f3c745;
+  animation: slide 12s steps(4) infinite, 6s infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+@keyframes colorful {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.sec-texts li span {
+  position: relative;
+}
+
+.sec-texts li span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 400px;
+  height: 90px;
+  background: #1b262c;
+  border-left: 2px solid #f3c745;
+  animation: typing 1.5s steps(10) infinite alternate;
+}
+
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
