@@ -8,6 +8,7 @@ import Footer from "../Footer/Footer";
 import { styled } from "styled-components";
 import { Route, Routes } from "react-router-dom";
 import Togglephone from "../toggle-items/Togglephone";
+import Portfolio from "../portfolio/Portfolio";
 
 const Home = () => {
   const HomeWrapper = styled.section`
@@ -19,6 +20,8 @@ const Home = () => {
         {<HeroSection />}
         {<MySkills />}
         {<About />}
+        {<Portfolio />}
+
         {<Contact />}
         {<Map />}
         {<Footer />}

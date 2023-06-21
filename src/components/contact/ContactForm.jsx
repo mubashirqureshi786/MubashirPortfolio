@@ -1,7 +1,12 @@
-import React from "react";
 import { styled } from "styled-components";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
+  const [state, handleSubmit] = useForm("meqwywrg");
+  if (state.succeeded) {
+    alert("Success");
+  }
+
   const ContactForm = styled.form`
     display: flex;
     flex-direction: column;
@@ -55,17 +60,22 @@ const ContactForm = () => {
     background-color: #f3c745;
   `;
   return (
-    <ContactForm>
+    <ContactForm
+      action="https://formspree.io/f/meqwywrg"
+      onSubmit={handleSubmit}
+    >
       <div className="name-inputs">
         <input
           type="text"
           placeholder="Name"
           required
+          name="name"
           autoComplete="off"
           className="input-name-phone"
         />
         <input
           type="number"
+          name="phone"
           placeholder="Phone"
           required
           autoComplete="off"
@@ -81,7 +91,9 @@ const ContactForm = () => {
         required
         placeholder="Enter your Message"
       ></textarea>
-      <Button>Contact Us</Button>
+      <Button type="submit" disabled={state.submitting}>
+        Contact Us
+      </Button>
     </ContactForm>
   );
 };

@@ -20,17 +20,20 @@ const Footer = () => {
     justify-content: center;
     gap: 10px;
   `;
-  const Icon = styled.div`
+  const Icon = styled.a`
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: #f3c745;
+    color: #090909;
     display: grid;
     justify-items: center;
     align-content: center;
     cursor: pointer;
+    transition: all 0.3s;
     &:hover {
       background-color: #fcd96fbe;
+      color: #fff;
     }
   `;
   const FooterNav = styled.ul`
@@ -55,19 +58,19 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <FooterIcons>
-        <Icon>
+        <Icon href="https://github.com/mubashirqureshi786">
           <RiGithubLine style={{ width: "30px", height: "30px" }} />
         </Icon>
-        <Icon>
+        <Icon href="https://www.linkedin.com/in/mubashir-qureshi-148029226/">
           <FaLinkedinIn style={{ width: "30px", height: "30px" }} />
         </Icon>
-        <Icon>
+        <Icon href="https://twitter.com/qazibashi">
           <BsTwitter style={{ width: "30px", height: "30px" }} />
         </Icon>
-        <Icon>
+        <Icon href="https://www.facebook.com/bashi.bhai.338">
           <FaFacebookF style={{ width: "30px", height: "30px" }} />
         </Icon>
-        <Icon>
+        <Icon href="https://instagram.com/qazi_bashiii?igshid=MzNlNGNkZWQ4Mg==">
           <BsInstagram style={{ width: "30px", height: "30px" }} />
         </Icon>
       </FooterIcons>
