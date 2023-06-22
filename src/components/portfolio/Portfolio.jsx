@@ -9,6 +9,10 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 
 const Portfolio = () => {
+  const handleButtonClick = () => {
+    window.open("https://bashi-tik-tak-toe.netlify.app", "_blank");
+  };
+
   const PortfolioWrapper = styled.section`
     width: 100%;
     height: 100vh;
@@ -51,9 +55,8 @@ const Portfolio = () => {
       color: #090909;
       transition: all 0.3s;
       &:hover {
-        padding: 1.2rem 2.7rem;
-        background-color: #ffbc05;
-        color: #fff;
+        background-color: rgba(0, 0, 0, 0.04);
+        color: #010101;
       }
     }
   `;
@@ -80,14 +83,19 @@ const Portfolio = () => {
           >
             <Button
               size="large"
-              sx={{ backgroundColor: "#f3c547", padding: ".5rem 3rem" }}
-              onClick={() =>
-                (window.location.href = "https://bashi-tik-tak-toe.netlify.app")
-              }
+              color="inherit"
+              sx={{
+                backgroundColor: "#f3c547",
+                padding: ".5rem 3rem",
+              }}
+              onClick={handleButtonClick}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               view
             </Button>
             <Button
+              color="inherit"
               size="large"
               sx={{ backgroundColor: "#f3c547", with: "50%" }}
             >
@@ -110,15 +118,17 @@ const Portfolio = () => {
             }}
           >
             <Button
+              color="inherit"
               size="large"
               sx={{ backgroundColor: "#f3c547", padding: ".5rem 3rem" }}
               onClick={() =>
-                (window.location.href = "https://bashi-calculator.netlify.app")
+                window.open("https://bashi-calculator.netlify.app", "_blank")
               }
             >
               view
             </Button>
             <Button
+              color="inherit"
               size="large"
               sx={{ backgroundColor: "#f3c547", with: "50%" }}
             >
@@ -141,15 +151,17 @@ const Portfolio = () => {
             }}
           >
             <Button
+              color="inherit"
               size="large"
               sx={{ backgroundColor: "#f3c547", padding: ".5rem 3rem" }}
               onClick={() =>
-                (window.location.href = "https://bashi-todo-list.netlify.app")
+                window.open("https://bashi-todo-list.netlify.app", "_blank")
               }
             >
               view
             </Button>
             <Button
+              color="inherit"
               size="large"
               sx={{ backgroundColor: "#f3c547", with: "50%" }}
             >
